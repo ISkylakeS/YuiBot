@@ -1,5 +1,6 @@
-src/config.json
+src/bot/config.json
 node_modules/*
 src/bot/client/PatreonClient.js
-src/Patreon.js
+src/bot/Patreon.js
 changelog.txt
+src/website/utils/*
