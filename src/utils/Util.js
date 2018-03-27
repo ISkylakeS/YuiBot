@@ -2,14 +2,19 @@ const snek = require('snekfetch');
 
 module.exports = {
     colour: () => 6308134,
-    format: (ms) => { // Credits to Mel/Aether
-        const methods = [86400, 3600, 60, 1];
-        const timeStr = [Math.floor(ms / methods[0]).toString().padStart(2, 0)];
-        for (let i = 0 ; i < 3; i++) {
-            timeStr.push(Math.floor(ms % methods[i] / methods[i + 1]).toString().padStart(2, '0'));
-        }
-
-        return timeStr.join(':');
+    format: (time) => {
+        const methods = [
+            { name: 'd', count: 86400 },
+            { name: 'h', count: 3600 },
+            { name: 'm', count: 60 },
+            { name: 's', count: 1 }
+          ];
+      
+          const timeStr = [Math.floor(time / methods[0].count).toString() + methods[0].name];
+          for (let i = 0; i < 3; i++) {
+            timeStr.push(Math.floor(time % methods[i].count / methods[i + 1].count).toString() + methods[i + 1].name);
+          }
+          return timeStr.join(', ');
     },
     loadEris: (Eris) => { // Credits to Aether
         const MessageCollector = require('./MessageCollector');
@@ -31,5 +36,13 @@ module.exports = {
     cooldown: new Set(),
     helpDesc: (bot) => {
         return `To use my commands do \`${bot.config.prefix}<command>\` or \`@Yui Hirasawa#0629 <command>\`\nTo get extended help, do \`${bot.config.prefix}help [command]\` or \`@Yui Hirasawa#0629 help [command]\``;
+    },
+    trimArray: (array, maxLen = 10) => {
+        if (array.length > maxLen) {
+			const len = array.length - maxLen;
+			array = array.slice(0, maxLen);
+			array.push(`${len} more...`);
+		}
+		return array;
     }
 };
