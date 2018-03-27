@@ -9,12 +9,9 @@ module.exports = class GuildJoinedEvent extends Event {
     }
 
     async run(guild) {
-        this.bot.log.custom('Guild', `Joined ${guild.name} (${guild.id}) | Now at ${this.bot.guilds.size} guilds.`);
+        this.bot.log.custom('GUILD', `Joined ${guild.name} (${guild.id}) | Now at ${this.bot.guilds.size} guilds.`);
         this.bot.botlists.post();
 
-        this.bot.editStatus('online', {
-            name: `for ${this.bot.guilds.size} guilds | ${this.bot.config.prefix}help`,
-            type: 3
-        });
+        this.bot.gameRotater.rotate();
     }
 }

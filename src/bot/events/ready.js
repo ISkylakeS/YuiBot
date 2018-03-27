@@ -18,10 +18,7 @@ module.exports = class ReadyEvent extends Event {
         console.log(`    |_| \\__,_|_|   |> Yayy~!`);
         console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= End of the boot log... =-=-=-=-=-=-=-=-=-=-=-=-=-=-');
 
-        this.bot.editStatus('online', {
-            name: `for ${this.bot.guilds.size} guilds | ${this.bot.config.prefix}help`,
-            type: 3
-        });
+        this.bot.gameRotater.rotate();
         this.bot.botlists.post();
         //this.bot.webhook.post(`Yui Hirasawa has launched!\n\tGuilds: ${this.bot.guilds.size}\n\tUsers: ${this.bot.users.size}\n\tChannels: ${Object.keys(this.bot.channelGuildMap).length}\n\tYayy~!`);
     }

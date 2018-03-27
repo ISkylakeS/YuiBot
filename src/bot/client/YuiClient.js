@@ -8,6 +8,7 @@ const BotLists = require('../modules/BotLists');
 const Webhooks = require('../../utils/Webhook');
 const Osu = require('node-osu');
 const Kitsu = require('kitsu');
+const GameRotater = require('../modules/Game');
 
 module.exports = class YuiClient extends Eris {
     /**
@@ -39,6 +40,7 @@ module.exports = class YuiClient extends Eris {
 			completeScores: false
         });
         this._kitsu = new Kitsu();
+        this.gameRotater = new GameRotater(this);
     }
 
     /**
@@ -107,5 +109,16 @@ module.exports = class YuiClient extends Eris {
 
             this.log.custom('Events', `Loaded ${files.length} events, connecting via WebSocket/Discord...`);
         });
+    }
+
+    /**
+     * Set an interval for a function and a delay.
+     * 
+     * @param {Function} fn Your function
+     * @param {Number} delay The delay
+     */
+    setInterval(fn, delay = 10000) {
+        const interval = setInterval(fn, delay);
+        return interval;
     }
 }

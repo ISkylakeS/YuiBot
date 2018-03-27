@@ -17,7 +17,7 @@ module.exports = class StatisticsCommand extends Command {
 
         msg.channel.createMessage({ embed: {
             title: "Yui Hirasawa - Statistics",
-            description: `Uptime: ${this.bot.utils.format(this.bot.uptime)}`,
+            description: `Uptime: ${this.bot.utils.format(process.uptime())}`,
             fields: [{
                 name: "Guilds",
                 value: this.bot.guilds.size,

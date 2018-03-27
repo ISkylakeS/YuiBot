@@ -55,27 +55,33 @@ module.exports = class HelpCommand extends Command {
                     },
                     {
                         name: "❯ Category",
-                        value: `${command.options.category ? command.options.category : "Core"}`
+                        value: `${command.options.category ? command.options.category : "Core"}`,
+                        inline: true
                     },
                     {
                         name: "❯ Aliases",
-                        value: `${command.options.aliases ? command.options.aliases.join(', ') : "No aliases founded..."}`
+                        value: `${command.options.aliases ? command.options.aliases.join(', ') : "No aliases founded..."}`,
+                        inline: true
                     },
                     {
                         name: "❯ Examples",
-                        value: `${command.options.examples ? command.options.examples.join(', ') : "No examples..."}`
+                        value: `${command.options.examples ? command.options.examples.join(', ') : "No examples..."}`,
+                        inline: true
                     },
                     {
                         name: "❯ Guild Only",
-                        value: `${command.options.isGuild}`
+                        value: `${command.options.isGuild ? "true" : "false"}`,
+                        inline: true
                     },
                     {
                         name: "❯ Owner Only",
-                        value: `${command.options.isOwner}`
+                        value: `${command.options.isOwner ? "true" : "false"}`,
+                        inline: true
                     },
                     {
                         name: "❯ NSFW?",
-                        value: command.options.isNSFW
+                        value: command.options.isNSFW ? "true" : "false",
+                        inline: true
                     }],
                     color: this.bot.utils.colour()
                 }});

@@ -9,11 +9,11 @@ module.exports = class Gearbox {
      * @param {Error} err The Node.js Error Paramter
      */
     _report(err) {
-        this.bot.createMessage(this.bot.config.channels.logging, {
+        this.bot.createMessage('426101490411896842', {
             embed: {
                 title: "Yui Hirasawa - Gearbox Report",
                 description: `\`\`\`js\n${err.stack}\`\`\``,
-                colour: this.bot.utils.colour()
+                color: this.bot.utils.colour()
             }
         });
     }
