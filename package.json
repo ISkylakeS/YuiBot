@@ -1,7 +1,7 @@
 {
     "name": "yuibot",
     "description": "Yui Hirasawa is a cute discord bot made in the Eris library! =w=",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "dependencies": {
         "aids": "0.1.0",
         "bluebird": "3.5.1",
@@ -12,7 +12,6 @@
         "express": "4.16.2",
         "kitsu": "5.0.4",
         "moment": "2.21.0",
-        "node-opus": "0.2.7",
         "node-osu": "^1.3.0",
         "passport": "0.4.0",
         "passport-discord": "0.1.3",
@@ -30,8 +29,8 @@
     "bugs": {
         "url": "https://github.com/ohlookitsAugust/Yui/issues"
     },
-    "homepage": "https://yui.ohlookitsaugust.space",
+    "homepage": "https://yuibot.xyz",
     "scripts": {
-        "start": "cd src/bot && node index.js"
+        "start": "cd src/bot && node Yui.js"
     }
 }
