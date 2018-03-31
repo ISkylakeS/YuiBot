@@ -13,9 +13,10 @@ import net.dv8tion.jda.core.EmbedBuilder;
 public class AboutCommand implements Command {
     @Override
     public void execute(String args, Context ctx) {
+        String owner = ctx.getJDA().asBot().getApplicationInfo().complete().getOwner().getAsMention();
         ctx.sendMessage(new EmbedBuilder()
                 .setTitle("About me, Yui!")
-                .setDescription("Hello! I'm Yui, your cute helper!\nI was created by <@280158289667555328>!")
+                .setDescription("Hello! I'm Yui, your cute helper!\nI was created by " + owner + "!")
                 .build()
         );
     }
