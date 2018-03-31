@@ -1,6 +1,3 @@
-src/bot/config.json
-node_modules/*
-src/bot/client/PatreonClient.js
-src/bot/Patreon.js
-changelog.txt
-src/website/utils/*
+build/*
+.idea/*
+.gradle/*

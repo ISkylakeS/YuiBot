@@ -1,0 +1,21 @@
+__**Yui v0.1.7 => Yui v0.1.8**__
+```diff
+* Edited the osu! command;
+* Renamed "general" => "core"
+* Did more stuff!
+```
+
+__**Yui v0.1.8 => Yui v0.1.9**__
+```diff
++ Search category, npm & github command;
++ Website (yuibot.xyz);
+* Fixed the help command, game rotater
+```
+
+__**Yui v0.1.9 => Yui v0.2.0**__
+```diff
++ Bot:
+	+ More commands added and more shit!
+* Website:
+	* Trying to do ssl and it breaks...
+```
