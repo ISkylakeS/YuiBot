@@ -1,4 +1,4 @@
 build/*
 .idea/*
 .gradle/*
-src/main/java/xyz/yuibot/discord/xyz.yuibot.discord.YuiConfig.java
+src/main/java/xyz/yuibot/discord/YuiConfig.java
