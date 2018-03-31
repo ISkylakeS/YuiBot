@@ -1,4 +1,4 @@
-package xyz.yuibot.discord.commands.core;
+package xyz.yuibot.discord.commands;
 
 import xyz.yuibot.discord.core.command.*;
 import xyz.yuibot.discord.core.entities.Context;
